@@ -1,0 +1,7 @@
+#!/bin/sh
+# Re-add custom.css link after pve-manager updates wipe index.html.tpl
+TPL=/usr/share/pve-manager/index.html.tpl
+grep -q custom.css "$TPL" && exit 0
+cp "$TPL" "$TPL.bak.$(date +%s)"
+sed -i "s#\(<link rel=\"stylesheet\" type=\"text/css\" href=\"/pwt/css/ext6-pmx.css?ver=\[% wtversion %\]\" />\)#\1\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/pve2/css/custom.css?v=4\" />#" "$TPL"
+systemctl restart pveproxy

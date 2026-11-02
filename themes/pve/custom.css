@@ -1,0 +1,62 @@
+
+/* unified flat white theme, light purple accent (2026-10-17) */
+* {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background-image: none !important;
+    outline: none !important;
+}
+html, body, .x-body, .x-viewport, .x-component, .x-container, .x-box-inner,
+.x-border-layout-ct, .x-panel, .x-panel-body, .x-panel-header, .x-panel-default,
+.x-window, .x-window-body, .x-window-header, .x-toolbar, .x-toolbar-default,
+.x-tab-bar, .x-tab-bar-body, .x-tab, .x-menu, .x-menu-body, .x-menu-item,
+.x-splitter, .x-splitter-default, .x-grid, .x-grid-view, .x-grid-header,
+.x-column-header, .x-grid-cell, .x-grid-row, .x-form-text-default,
+.x-form-display-field, .x-fieldset, .x-box-target, .x-component-default,
+.x-autocontainer-innerCt, .x-mask, div[id*="toolbar"], div[class*="toolbar"],
+div[class*="header"], .proxmox-logo-panel {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+html, body, .x-body, .x-btn-inner, .x-tab-inner, .x-form-item-label,
+.x-component, .x-grid-cell-inner, .x-menu-item-text, .x-toolbar-text,
+.x-panel-header-title, .x-title-text, .x-window-header-title, input {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif !important;
+}
+.x-btn-over, .x-menu-item-active { background: #f6f4f9 !important; }
+.x-btn-focus { box-shadow: 0 0 0 2px rgba(167,139,250,.3) !important; }
+.x-grid-row-over .x-grid-td { background: #f7f6fa !important; }
+.x-grid-item-selected .x-grid-td, .x-grid-row-selected .x-grid-td { background: #f5f1ff !important; }
+.x-tab-active .x-tab-inner { color: #a78bfa !important; font-weight: 600 !important; }
+.x-btn-default-toolbar-small, .x-form-text-default, .x-form-trigger-default {
+    background: #fafafa !important;
+}
+.x-btn-default-small, .x-btn-default-medium,
+.x-btn-primary, .x-btn-over.x-btn-default-toolbar-small {
+    background: #a78bfa !important;
+}
+
+/* slight rounding on interactive elements (2026-10-20) */
+.x-btn, .x-btn-default-small, .x-btn-default-medium, .x-btn-default-large,
+.x-btn-default-toolbar-small, .x-btn-default-toolbar-medium,
+.x-form-text-default, .x-form-trigger-default, .x-form-textarea,
+.x-tab, .x-menu, .x-menu-item, .x-window, .x-panel-header,
+.x-toolbar, .x-column-header, .x-fieldset, input, textarea, select {
+    border-radius: 6px !important;
+}
+.x-btn .x-btn-wrap, .x-btn-button { border-radius: 4px !important; }
+
+/* rounding for tree/sidebar list rows (2026-10-20) */
+.x-grid-item, .x-grid-item-selected, .x-grid-item-over,
+.x-grid-td, .x-grid-row, .x-tree-node, .x-grid-cell {
+    border-radius: 6px !important;
+}
+
+/* round tree rows by clipping the row container (2026-10-20 v2) */
+.x-grid-item {
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+.x-grid-item-selected, .x-grid-item-over { border-radius: 6px !important; }
