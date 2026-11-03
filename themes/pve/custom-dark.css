@@ -54,3 +54,50 @@ input, textarea, select {
 .x-grid-tree-node-expanded .x-tree-node-harddisk .x-grid-cell-inner {
     color: #e4e4e7 !important;
 }
+.x-form-trigger-default { position: relative; }
+.x-form-trigger-default::before {
+    content: "▾";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e4e4e7;
+    font-size: 14px;
+    line-height: 1;
+}
+.x-tool-close { filter: none !important; }
+.x-tool-close::before {
+    content: "×";
+    display: block;
+    width: 15px;
+    height: 15px;
+    color: #e4e4e7;
+    font-size: 18px;
+    line-height: 15px;
+    text-align: center;
+}
+.x-form-radio-default {
+    position: relative;
+    display: block;
+    filter: none !important;
+}
+.x-form-radio-default::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    border: 1px solid #a1a1aa !important;
+    border-radius: 50% !important;
+}
+.x-form-cb-checked .x-form-radio-default::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    background: #a78bfa !important;
+    border-radius: 50% !important;
+}
