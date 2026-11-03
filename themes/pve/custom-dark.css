@@ -17,11 +17,16 @@ html, body, .x-body, .x-btn-inner, .x-tab-inner, .x-form-item-label,
 select, .x-form-field, .x-form-display-field {
     color: #e4e4e7 !important;
 }
-.x-panel-header, .x-window-header, .x-toolbar, .x-toolbar-default,
+.x-panel-header, .x-panel-header-default, .x-window-header,
+.x-window-header-default, .x-toolbar, .x-toolbar-default,
 .x-tab-bar, .x-tab-bar-body, .x-grid-header, .x-column-header,
 div[id*="toolbar"], div[class*="toolbar"], div[class*="header"] {
-    background: #212125 !important;
-    background-color: #212125 !important;
+    background: #18181b !important;
+    background-color: #18181b !important;
+}
+.x-treelist-pve-nav, .x-treelist-item {
+    background: #18181b !important;
+    background-color: #18181b !important;
 }
 .x-btn-over, .x-menu-item-active { background: #2d2a35 !important; }
 .x-btn-focus { box-shadow: 0 0 0 2px rgba(167,139,250,.45) !important; }
@@ -100,4 +105,30 @@ input, textarea, select {
     height: 7px;
     background: #a78bfa !important;
     border-radius: 50% !important;
+}
+.x-form-checkbox-default {
+    position: relative;
+    display: block;
+    filter: none !important;
+}
+.x-form-checkbox-default::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    background: #27272a !important;
+    border: 1px solid #a1a1aa !important;
+    border-radius: 3px !important;
+}
+.x-form-cb-checked .x-form-checkbox-default::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a78bfa;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
 }

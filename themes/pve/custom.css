@@ -10,7 +10,8 @@
 }
 html, body, .x-body, .x-viewport, .x-component, .x-container, .x-box-inner,
 .x-border-layout-ct, .x-panel, .x-panel-body, .x-panel-header, .x-panel-default,
-.x-window, .x-window-body, .x-window-header, .x-toolbar, .x-toolbar-default,
+.x-panel-header-default, .x-window, .x-window-body, .x-window-header,
+.x-window-header-default, .x-toolbar, .x-toolbar-default,
 .x-tab-bar, .x-tab-bar-body, .x-tab, .x-menu, .x-menu-body, .x-menu-item,
 .x-splitter, .x-splitter-default, .x-grid, .x-grid-view, .x-grid-header,
 .x-column-header, .x-grid-cell, .x-grid-row, .x-form-text-default,
@@ -41,6 +42,27 @@ html, body, .x-body, .x-btn-inner, .x-tab-inner, .x-form-item-label,
 .x-treelist-item-selected > .x-treelist-row > .x-treelist-item-text,
 .x-treelist-item-selected > .x-treelist-row > .x-treelist-item-icon {
     color: #18181b !important;
+}
+.x-panel, .x-panel-body:has(canvas), .x-chart, .x-panel canvas {
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+.x-legend {
+    background: transparent !important;
+}
+.x-legend-container {
+    display: inline-block;
+    border: none !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+.x-legend-container .x-legend-item {
+    border: none !important;
+    border-radius: 0 !important;
+}
+.x-progress-default:not(.warning):not(.critical) .x-progress-bar-default {
+    background: #a78bfa !important;
 }
 .x-form-trigger-default { position: relative; }
 .x-form-trigger-default::before {
