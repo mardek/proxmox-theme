@@ -13,16 +13,16 @@
     <link rel="stylesheet" type="text/css" href="/pve2/font-logos/css/font-logos.css" />
     <link rel="stylesheet" type="text/css" href="/pve2/css/ext6-pve.css?ver=[% version %]" />
     <link rel="stylesheet" type="text/css" href="/pwt/css/ext6-pmx.css?ver=[% wtversion %]" />
-    <link rel="stylesheet" type="text/css" href="/pve2/css/custom.css?v=20" />
+    <link rel="stylesheet" type="text/css" href="/pve2/css/custom.css?v=23" />
     [%- IF theme != 'crisp' %]
       [%- IF theme != 'auto' %]
     <link rel="stylesheet" type="text/css" href="/pwt/themes/theme-[% theme %].css?ver=[% wtversion %]" />
         [%- IF theme == 'proxmox-dark' %]
-    <link rel="stylesheet" type="text/css" href="/pve2/css/custom-dark.css?v=20" />
+    <link rel="stylesheet" type="text/css" href="/pve2/css/custom-dark.css?v=23" />
         [%- END -%]
       [%- ELSE %]
     <link rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" href="/pwt/themes/theme-proxmox-dark.css?ver=[% wtversion %]" />
-    <link rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" href="/pve2/css/custom-dark.css?v=20" />
+    <link rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" href="/pve2/css/custom-dark.css?v=23" />
       [%- END -%]
     [%- END -%]
 
