@@ -1,11 +1,21 @@
 # Proxmox VE Theme
 
-A custom light and dark theme for the Proxmox VE web interface.
+A flat light and dark theme with purple accents for the Proxmox VE web interface.
 
 ## Overview
 
-Flat styles with light purple accents, support for Proxmox Dark and automatic
-OS-based theme switching, and automatic restoration after Proxmox updates.
+Matching light and dark color schemes with consistent buttons, selections, form
+controls, and automatic switching based on the operating system's preference.
+
+## Screenshots
+
+**Dark theme**
+
+![Proxmox VE dark theme](screenshots/proxmox-dark.png)
+
+**Light theme**
+
+![Proxmox VE light theme](screenshots/proxmox-light.png)
 
 ## Files
 
