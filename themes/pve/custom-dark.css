@@ -1,0 +1,56 @@
+/* unified flat dark theme, light purple accent */
+html, body, .x-body, .x-viewport, .x-component, .x-container, .x-box-inner,
+.x-border-layout-ct, .x-panel, .x-panel-body, .x-panel-header, .x-panel-default,
+.x-window, .x-window-body, .x-window-header, .x-toolbar, .x-toolbar-default,
+.x-tab-bar, .x-tab-bar-body, .x-tab, .x-menu, .x-menu-body, .x-menu-item,
+.x-splitter, .x-splitter-default, .x-grid, .x-grid-view, .x-grid-header,
+.x-column-header, .x-grid-cell, .x-grid-row, .x-form-text-default,
+.x-form-display-field, .x-fieldset, .x-box-target, .x-component-default,
+.x-autocontainer-innerCt, .x-mask, div[id*="toolbar"], div[class*="toolbar"],
+div[class*="header"], .proxmox-logo-panel {
+    background: #18181b !important;
+    background-color: #18181b !important;
+}
+html, body, .x-body, .x-btn-inner, .x-tab-inner, .x-form-item-label,
+.x-component, .x-grid-cell-inner, .x-menu-item-text, .x-toolbar-text,
+.x-panel-header-title, .x-title-text, .x-window-header-title, input, textarea,
+select, .x-form-field, .x-form-display-field {
+    color: #e4e4e7 !important;
+}
+.x-panel-header, .x-window-header, .x-toolbar, .x-toolbar-default,
+.x-tab-bar, .x-tab-bar-body, .x-grid-header, .x-column-header,
+div[id*="toolbar"], div[class*="toolbar"], div[class*="header"] {
+    background: #212125 !important;
+    background-color: #212125 !important;
+}
+.x-btn-over, .x-menu-item-active { background: #2d2a35 !important; }
+.x-btn-focus { box-shadow: 0 0 0 2px rgba(167,139,250,.45) !important; }
+.x-grid-row-over .x-grid-td { background: #27272a !important; }
+.x-grid-item-selected .x-grid-td, .x-grid-row-selected .x-grid-td { background: #37304f !important; }
+.x-tab-active .x-tab-inner { color: #c4b5fd !important; font-weight: 600 !important; }
+.x-btn-default-toolbar-small, .x-form-text-default, .x-form-trigger-default,
+input, textarea, select {
+    background: #27272a !important;
+}
+.x-btn-default-small, .x-btn-default-medium,
+.x-btn-primary, .x-btn-over.x-btn-default-toolbar-small {
+    background: #a78bfa !important;
+}
+.x-btn-default-small .x-btn-inner, .x-btn-default-medium .x-btn-inner,
+.x-btn-primary .x-btn-inner, .x-btn-over.x-btn-default-toolbar-small .x-btn-inner {
+    color: #18181b !important;
+}
+.pve-itype-icon-cpu, .pve-itype-icon-cdrom, .pve-itype-icon-memory,
+.pve-itype-icon-pci, .pve-itype-icon-serial, .pve-itype-icon-die,
+.pmx-itype-icon-processor, .pmx-itype-icon-memory, .pve-itype-icon-storage,
+.x-tree-node-harddisk, .x-grid-tree-node-expanded .x-tree-node-harddisk {
+    filter: none !important;
+}
+.pve-itype-icon-cpu .x-grid-cell-inner, .pve-itype-icon-cdrom .x-grid-cell-inner,
+.pve-itype-icon-memory .x-grid-cell-inner, .pve-itype-icon-pci .x-grid-cell-inner,
+.pve-itype-icon-serial .x-grid-cell-inner, .pve-itype-icon-die .x-grid-cell-inner,
+.pmx-itype-icon-processor .x-grid-cell-inner, .pmx-itype-icon-memory .x-grid-cell-inner,
+.pve-itype-icon-storage .x-grid-cell-inner, .x-tree-node-harddisk .x-grid-cell-inner,
+.x-grid-tree-node-expanded .x-tree-node-harddisk .x-grid-cell-inner {
+    color: #e4e4e7 !important;
+}

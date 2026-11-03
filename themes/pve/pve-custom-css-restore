@@ -1,7 +1,15 @@
 #!/bin/sh
-# Re-add custom.css link after pve-manager updates wipe index.html.tpl
+# Re-add custom stylesheet links after pve-manager updates wipe index.html.tpl
 TPL=/usr/share/pve-manager/index.html.tpl
-grep -q custom.css "$TPL" && exit 0
+grep -q custom.css "$TPL" && grep -q custom-dark.css "$TPL" && exit 0
 cp "$TPL" "$TPL.bak.$(date +%s)"
-sed -i "s#\(<link rel=\"stylesheet\" type=\"text/css\" href=\"/pwt/css/ext6-pmx.css?ver=\[% wtversion %\]\" />\)#\1\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/pve2/css/custom.css?v=4\" />#" "$TPL"
+if ! grep -q custom.css "$TPL"; then
+    sed -i "s#\(<link rel=\"stylesheet\" type=\"text/css\" href=\"/pwt/css/ext6-pmx.css?ver=\[% wtversion %\]\" />\)#\1\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/pve2/css/custom.css?v=7\" />#" "$TPL"
+fi
+if ! grep -q custom-dark.css "$TPL"; then
+    sed -i \
+        -e "s#\(<link rel=\"stylesheet\" type=\"text/css\" href=\"/pwt/themes/theme-\[% theme %\].css?ver=\[% wtversion %\]\" />\)#\1\n        [%- IF theme == 'proxmox-dark' %]\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/pve2/css/custom-dark.css?v=7\" />\n        [%- END -%]#" \
+        -e "s#\(<link rel=\"stylesheet\" type=\"text/css\" media=\"(prefers-color-scheme: dark)\" href=\"/pwt/themes/theme-proxmox-dark.css?ver=\[% wtversion %\]\" />\)#\1\n    <link rel=\"stylesheet\" type=\"text/css\" media=\"(prefers-color-scheme: dark)\" href=\"/pve2/css/custom-dark.css?v=7\" />#" \
+        "$TPL"
+fi
 systemctl restart pveproxy
