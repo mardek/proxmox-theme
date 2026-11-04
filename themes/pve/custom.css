@@ -72,6 +72,13 @@ html, body, .x-body, .x-btn-inner, .x-tab-inner, .x-form-item-label,
 .x-progress-default:not(.warning):not(.critical) .x-progress-bar-default {
     background: #a78bfa !important;
 }
+.x-grid-row-loading {
+    background: transparent url("/pwt/images/spinner.svg") no-repeat center center !important;
+    background-size: 16px !important;
+}
+.x-grid-item-selected .x-grid-row-loading, .x-grid-row-selected .x-grid-row-loading {
+    background-color: #f5f1ff !important;
+}
 .x-form-trigger-default { position: relative; }
 .x-form-trigger-default::before {
     content: "▾";

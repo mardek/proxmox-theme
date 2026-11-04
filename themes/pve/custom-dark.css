@@ -32,6 +32,13 @@ div[id*="toolbar"], div[class*="toolbar"], div[class*="header"] {
 .x-btn-focus { box-shadow: 0 0 0 2px rgba(167,139,250,.45) !important; }
 .x-grid-row-over .x-grid-td { background: #27272a !important; }
 .x-grid-item-selected .x-grid-td, .x-grid-row-selected .x-grid-td { background: #37304f !important; }
+.x-grid-row-loading {
+    background: transparent url("/pwt/images/spinner.svg") no-repeat center center !important;
+    background-size: 16px !important;
+}
+.x-grid-item-selected .x-grid-row-loading, .x-grid-row-selected .x-grid-row-loading {
+    background-color: #37304f !important;
+}
 .x-tab-active .x-tab-inner { color: #c4b5fd !important; font-weight: 600 !important; }
 .x-btn-default-toolbar-small, .x-form-text-default, .x-form-trigger-default,
 input, textarea, select {
